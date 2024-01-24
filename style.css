@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+section div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#search_keyword {
+    padding: 15px;
+    border-radius: 8px;
+    border-color: grey;
+    width: 60%;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 2px grey;
+}
+
+#search_btn {
+    padding: 15px 25px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: radial-gradient(rgb(211, 82, 53), rgb(81, 73, 69));
+    font-weight: 600;
+
+}
+
+#search_btn:hover {
+    /* border: 2px solid rgb(74, 86, 7); */
+    color: rgb(225, 216, 218);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* background: transparent; */
+    background: radial-gradient(rgb(126, 72, 60), rgb(224, 219, 217));
+    font-weight: 600;    
+}
+
+.loading {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    /* border: 3px solid white; */
+    border-top: 4px solid red;
+    animation: spin 2s infinite linear;
+
+}
+
+.loader_container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.show_more_btn_container {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 99;
+}
+
+.show_more {
+    padding: 12px 20px;
+    background-color: rgb(234, 86, 101);
+    color: white;
+    border: none;
+    display: none;
+
+}
+
+.container {
+
+    width: 30%;
+    border-radius: 20px;
+    border: 2px solid grey;
+    overflow: hidden;
+    position: relative;
+    min-width: 250px;
+    min-height: 400px;
+    transition: .8s linear All;
+}
+
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.likes {
+    position: absolute;
+    /* top:10px; */
+    /* left:40%; */
+    text-align: center;
+    /* right:20px; */
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.445);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.like-count {
+    color: white;
+}
+
+.des {
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(240, 248, 255, 0.397);
+    font-size: 20px;
+
+
+}
+
+.container:hover .des {
+    bottom: 30px;
+    z-index: 3;
+}
+
+.container:hover .likes {
+
+    z-index: 2;
+}
+
+.container:hover img {
+    transform: scale(1.1);
+    transition: .5s linear;
+}
+
+.image_container {
+    display: grid;
+    /* display: grid; */
+    height: 50px;
+    width: 75rem;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: 100px; */
+    gap: 2rem;
+}
+
+.header-section {
+    /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYHuWhS7LExmMGcyMK5nLeDGF8T_7AEJFo9oXV6D1OyybkePJeKUyfNEUMc0VSj_3dMjo&usqp=CAU"); */
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: changeBack 6s infinite ease-in-out alternate-reverse;
+}
+
+@keyframes changeBack {
+    0% {
+        background-color: rgb(22, 117, 117);
+        /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsI_W0dVVz23q_IVJLLketiJtVosLBoMUWTr_jSzGoHAAFJyXTC9N6vKbSQkXr5tcoHZA&usqp=CAU"); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    50% {
+        background-color: blueviolet;
+        /* background: url("https://iso.500px.com/wp-content/uploads/2016/10/stock-photo-159358357.jpg"); */
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    100% {
+        background-color: rgb(135, 135, 25);
+        /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYHuWhS7LExmMGcyMK5nLeDGF8T_7AEJFo9oXV6D1OyybkePJeKUyfNEUMc0VSj_3dMjo&usqp=CAU"); */
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
+h2 {
+    font-size: 50px;
+    color: white;
+    margin: 20px;
+}
